@@ -218,7 +218,8 @@
 
 			pinctrl: siul2-pinctrl@4009c240 {
 				compatible = "nxp,s32g-siul2-pinctrl",
-					     "nxp,s32cc-siul2-pinctrl";
+					     "nxp,s32cc-siul2-pinctrl",
+					     "nxp,s32g2-siul2-pinctrl";
 				#pinctrl-cells = <2>;
 
 				reg = <MSCRS_SIUL2_0    0 0x0 0x198>,
@@ -537,7 +538,7 @@
 &gmac0 {
 	pinctrl-0 = <&gmac0_pins &gmac0_mdio_pins>;
 	pinctrl-1 = <&gmac0_mdio_pins>;
-	pinctrl-names = "gmac_rgmii", "gmac_sgmii";
+	pinctrl-names = "default", "gmac_sgmii";
 };
 
 &qspi {
