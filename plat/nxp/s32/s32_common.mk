@@ -169,6 +169,8 @@ DTC_CPPFLAGS	+= -I${S32_PLAT}/include \
 				   -Iinclude/lib/libc \
 				   -Iinclude/arch/aarch64 \
 
+TF_LDFLAGS	+= --no-warn-rwx-segments
+
 all: check_dtc_version
 check_dtc_version:
 	$(eval DTC_VERSION_RAW = $(shell $(DTC) --version | cut -f3 -d" " \
